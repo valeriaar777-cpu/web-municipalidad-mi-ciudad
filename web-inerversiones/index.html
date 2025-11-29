@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Municipalidad de Mi Ciudad - Ejemplo Bloques</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏛️</text></svg>">
+</head>
+<body>
+    <header class="header">
+        <h1>Municipalidad de Mi Ciudad</h1>
+        <p>Tu portal de información y servicios.</p>
+        <nav class="barra-menu-solo-enlaces">
+    <ul>
+        <a href="nosotros.html" class="btn">NOSOTROS</a>
+
+        <a href="mision.html" class="btn">MISION</a>
+        
+        <a href="vision.html" class="btn">VISION</a>
+    </ul>
+</nav>
+    </header>
+
+    <main class="main-content">
+        <h2>Servicios y Trámites Destacados</h2>
+        
+        <section class="cards-container">
+            <div class="card">
+                <h3>🏛️ Trámites en Línea</h3>
+                <p>Realiza solicitudes, paga impuestos y consulta el estado de tus trámites desde casa.</p>
+                <a href="tramites.html" class="btn">Ver Más</a>
+            </div>
+
+     <div class="card">
+    <h3>📰 Últimas Noticias</h3>
+    <p>Mantente al día con los anuncios oficiales, eventos y proyectos de la ciudad.</p>
+    <a href="noticias.html" class="btn">Leer Noticias</a>
+</div>
+            <div class="card">
+                <h3>📞 Contacto Directo</h3>
+                <p>Números de emergencia, directorio de oficinas y formulario para consultas ciudadanas.</p>
+    
+    <div id="infoContacto" class="hidden-info">
+        <hr>
+        <ul class="contact-list">
+            <li>*Teléfono:* <a href="tel:+504 9716-8878">9716-8878</a></li>
+            <li>*Emergencias:* <a href="tel:911">911</a></li>
+            <li>*Correo:* <a href="valeriaar777@gmail.com">valeriaar777@gmail.com</a></li>
+        </ul>
+        <p style="font-size: 0.9em; text-align: center;">Horario de atención: 8 AM - 5 PM</p>
+    </div>
+    
+    <a href="#" class="btn" onclick="mostrarOcultar('infoContacto'); return false;">Ver / Ocultar Contacto</a>
+    </div>
+            </div>
+
+            <div class="card">
+                <h3>📅 Eventos de la Ciudad</h3>
+                <p>Consulta el calendario cultural, deportivo y de actividades comunitarias programadas.</p>
+                <a href="eventos.html" class="btn">Ver Calendario</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Municipalidad de Mi Ciudad. Todos los derechos reservados.</p>
+        <div class="social-links">
+            <a href="https://www.Facebook.com/Valria Madrid"target="_blank">Facebook</a> |
+            <a href="https://wa.me/9716-8878"target="_blank">WhatsApp</a> |
+            <a href="https://www.Instagram.com/municipalidadsps.504"target="_blank">Instagram</a>
+        </div>
+    </footer>
+
+    <script>
+        function mostrarOcultar(id) {
+            // Obtiene el elemento que tiene la ID (en este caso, 'infoContacto')
+            var elemento = document.getElementById(id);
+            
+            // Verifica si el elemento está visible
+            if (elemento.style.display === "block") {
+                // Si está visible, lo oculta
+                elemento.style.display = "none";
+            } else {
+                // Si está oculto, lo muestra
+                elemento.style.display = "block";
+            }
+        }
+    </script>
+    
+</body>
+</html>
+</body>
+</html>

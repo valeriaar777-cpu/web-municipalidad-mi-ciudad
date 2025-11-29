@@ -1,0 +1,307 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Fondo suave para toda la página */
+    color: #333;
+    
+}
+
+/* --- Encabezado --- */
+.header {
+    .barra-menu-solo-enlaces {
+    /* Configuración para centrar el menú dentro del ancho máximo de la página */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.barra-menu-solo-enlaces ul {
+    list-style-type: none; /* Elimina los puntos */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+    
+    /* La propiedad clave para poner los elementos en línea y centrarlos: */
+    display: flex; 
+    justify-content: center; /* Centra el grupo de enlaces en la barra */
+}
+
+.barra-menu-solo-enlaces li {
+    /* Espacio entre cada elemento del menú */
+    margin: 0 5px; 
+}
+
+.barra-menu-solo-enlaces a {
+    display: block; /* Hace que todo el área sea clicable */
+    color: #333; /* Color oscuro para el texto normal */
+    text-align: center;
+    padding: 15px 12px;
+    text-decoration: none; /* Elimina el subrayado */
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-top: 2px;
+}
+
+.barra-menu-solo-enlaces a:hover {
+    background-color: #f2f2f2; /* Fondo al pasar el ratón */
+    color: #0056b3; /* Color de énfasis */
+}
+
+/* Estilo opcional para el botón destacado (si lo usas) */
+.enlace-destacado {
+    background-color: white; /* Color naranja fuerte */
+    color: rgb(14, 12, 12) !important; /* Texto blanco, fuerza el color */
+    border-radius: 4px;
+    padding: 10px 15px !important; 
+    margin: 8px 5px; /* Ajusta el margen para que se vea bien */
+}
+   /* Color de fondo de respaldo si la imagen no carga */
+    background-color: #004a7c; 
+    
+    /* Ruta de tu imagen de fondo */
+    background-image: url('portada.jpg'); 
+    
+    /* Centra la imagen de fondo */
+    background-position: center; 
+    /* Asegura que la imagen cubra todo el área */
+    background-size: cover; 
+    /* Evita que la imagen se repita si es pequeña */
+    background-repeat: no-repeat; 
+    
+    color: white;
+    padding: 80px 20px; /* Aumenta el padding para dar más altura al cover */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    /* Opcional: para un efecto de superposición oscura sobre la imagen */
+    position: relative; 
+    z-index: 1; /* Asegura que el contenido esté encima de la capa */
+}
+
+/* Opcional: Capa semitransparente para mejorar la legibilidad del texto */
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color negro semitransparente */
+    z-index: -1; /* Coloca esta capa por debajo del contenido */
+}
+
+/* Ajusta los estilos de los títulos dentro del header para que sean más visibles */
+.header h1, .header p {
+    color: white; /* Asegura que el texto sea blanco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para el texto */
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* --- Contenido Principal --- */
+.main-content {
+    max-width: 1200px;
+    margin: 30px auto; /* Centra el contenido principal */
+    padding: 0 20px;
+}
+
+.main-content h2 {
+    text-align: center;
+    color: #00557c;
+    margin-bottom: 30px;
+}
+
+/* --- Contenedor de las Cards (Bloques) --- */
+.cards-container {
+    display: flex;
+    /* Ajusta las cards en una nueva línea si no caben */
+    flex-wrap: wrap; 
+    /* Distribuye el espacio entre ellas */
+    justify-content: space-between; 
+    gap: 20px; /* Espacio entre las cards */
+}
+
+/* --- Estilo de cada Bloque (Card) --- */
+.card {
+    background-color: white;
+    /* Para que cada card ocupe aproximadamente 1/4 del ancho, menos el espacio (gap) */
+    flex: 1 1 calc(25% - 20px); 
+    min-width: 250px; /* Asegura un tamaño mínimo en pantallas pequeñas */
+    padding: 20px;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.3s ease; /* Transición para el efecto hover */
+    display: flex;
+    flex-direction: column;
+    .card-image {
+    /* Ocupa el 100% del ancho del contenedor (la card) */
+    width: 100%; 
+    /* Asegura que la imagen no se distorsione al cortar */
+    height: 150px; 
+    /* Define una altura fija (puedes ajustarla) */
+    object-fit: cover; 
+    /* Asegura que las esquinas superiores sean cuadradas/redondeadas */
+    border-radius: 8px 8px 0 0; 
+    /* Quita el margen inferior predeterminado que a veces tienen las imágenes */
+    margin-bottom: 15px; 
+}
+
+/* Modificación al .card para que la imagen se vea bien */
+.card {
+    /* Esto es importante: asegura que la imagen no se salga de los bordes redondeados */
+    overflow: hidden; 
+    /* El resto de estilos de .card ya están definidos (sombras, etc.) */
+    
+    /* Si tienes bordes redondeados, asegúrate de que la imagen siga esa forma en la parte superior */
+    border-radius: 8px;
+}
+}
+
+/* Efecto al pasar el ratón */
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+    color: #007bff; /* Color azul para los títulos de los bloques */
+    margin-top: 0;
+}
+
+.card p {
+    flex-grow: 1; /* Hace que el párrafo ocupe el espacio restante */
+}
+
+/* Estilo del Botón dentro de la Card */
+.btn {
+    display: inline-block;
+    background-color: #28a745; /* Color verde para el botón de acción */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none; /* Quita el subrayado del enlace */
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #1e7e34;
+}
+
+/* --- Pie de Página --- */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer p, .footer .social-links {
+    margin: 5px 0;
+}
+
+.footer a {
+    color: #adb5bd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+/* --- Adaptabilidad (Responsive Design) --- */
+/* Cuando la pantalla es menor a 768px (tablets y móviles) */
+@media (max-width: 768px) {
+    .cards-container {
+        /* Muestra solo dos cards por fila */
+        justify-content: center;
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+/* Cuando la pantalla es menor a 500px (móviles) */
+@media (max-width: 500px) {
+    .card {
+        /* Muestra una sola card por fila */
+        flex: 1 1 100%;
+        min-width: auto;
+    }
+    /* Clase para que el contenido esté OCULTO por defecto */
+.hidden-info {
+    display: none; /* Propiedad clave para ocultar */
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f8f9fa; /* Fondo ligero para el detalle */
+    border-radius: 4px;
+}
+
+/* Estilos para la lista de contactos */
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.contact-list li {
+    margin-bottom: 5px;
+}
+
+.contact-list li a {
+    color: #007bff;
+    text-decoration: none;
+}
+.tag {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-top: 5px;
+}
+/* --- Estilo para el Botón Flotante de WhatsApp --- */
+.whatsapp-float {
+    position: fixed; /* Mantiene el botón fijo en la pantalla */
+    width: 60px;
+    height: 60px;
+    bottom: 40px; /* Distancia desde la parte inferior */
+    right: 40px; /* Distancia desde el lado derecho */
+    background-color: #25d366; /* Color verde de WhatsApp */
+    color: #fff;
+    border-radius: 50px; /* Hace que sea un círculo perfecto */
+    text-align: center;
+    font-size: 30px;
+    line-height: 60px; /* Centra el texto verticalmente */
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100; /* Asegura que esté por encima de otros elementos */
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 500px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 24px;
+        line-height: 50px;
+    }
+}
+}
